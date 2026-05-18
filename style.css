@@ -1,0 +1,382 @@
+/*  RESET  */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  line-height: 1.6;
+}
+
+/*  NAVBAR  */
+
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 50px;
+
+  background: transparent;
+
+  transition: 0.3s;
+
+  z-index: 1000;
+}
+
+/* Navbar Scroll Effect */
+
+.navbar.scrolled{
+  background: rgba(0,0,0,0.8);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+
+.logo{
+  font-size: 30px;
+  font-weight: bold;
+  color: cyan;
+}
+
+/* Nav Links */
+
+.nav-links{
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li{
+  margin-left: 25px;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover{
+  color: cyan;
+}
+
+/* HERO SECTION*/
+
+.hero{
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 20px;
+
+  /* Background Image Only For Hero */
+
+  background:
+  linear-gradient(rgba(0,0,0,0.7),
+  rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hero Heading */
+
+.hero h1{
+  font-size: 70px;
+  margin-bottom: 20px;
+  color: white;
+  line-height: 1.3;
+}
+
+/* Hero Subtitle */
+
+.hero p{
+  font-size: 24px;
+  margin-bottom: 35px;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+/* Button */
+
+button{
+  padding: 15px 40px;
+
+  border: none;
+
+  background: cyan;
+  color: black;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  border-radius: 40px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* Button Hover */
+
+button:hover{
+  transform: scale(1.1);
+
+  box-shadow: 0 0 20px cyan;
+}
+
+/* COMMON SECTIONS  */
+
+.section{
+  padding: 100px 50px;
+
+  text-align: center;
+
+  background: #111827;
+}
+
+/* Section Heading */
+
+.section h2{
+  font-size: 45px;
+  margin-bottom: 25px;
+  color: cyan;
+}
+
+/* Section Paragraph */
+
+.section p{
+  font-size: 20px;
+
+  max-width: 900px;
+
+  margin: auto;
+
+  color: #d1d5db;
+}
+
+/*  CARDS  */
+
+.cards{
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-top: 50px;
+
+  flex-wrap: wrap;
+}
+
+/* Individual Card */
+
+.card{
+  background: #1e293b;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  width: 280px;
+
+  transition: 0.3s;
+}
+
+/* Card Hover */
+
+.card:hover{
+  transform: translateY(-10px);
+
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+/* Card Heading */
+
+.card h3{
+  margin-bottom: 15px;
+
+  color: cyan;
+}
+
+/* Card Text */
+
+.card p{
+  color: #d1d5db;
+}
+
+/*  CONTACT SECTION  */
+
+.contact-section{
+  padding: 100px 20px;
+
+  background: #0f172a;
+
+  text-align: center;
+}
+
+/* Contact Heading */
+
+.contact-section h2{
+  font-size: 50px;
+
+  margin-bottom: 40px;
+
+  color: cyan;
+}
+
+/* Form */
+
+.contact-form{
+  max-width: 800px;
+
+  margin: auto;
+}
+
+/* Inputs */
+
+.contact-form input,
+.contact-form textarea{
+  width: 100%;
+
+  padding: 18px;
+
+  margin-bottom: 25px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #1e293b;
+
+  color: white;
+
+  font-size: 18px;
+
+  outline: none;
+}
+
+/* Placeholder */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color: #d1d5db;
+}
+
+/* Textarea */
+
+.contact-form textarea{
+  height: 180px;
+
+  resize: none;
+}
+
+/* Contact Button */
+
+.contact-form button{
+  width: 100%;
+}
+
+/*  FOOTER  */
+
+footer{
+  background: #020617;
+
+  padding: 20px;
+
+  text-align: center;
+
+  color: #9ca3af;
+}
+
+/* HAMBURGER MENU */
+
+.menu-toggle{
+  display: none;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .navbar{
+    padding: 20px;
+  }
+
+  .menu-toggle{
+    display: block;
+  }
+
+  .nav-links{
+    position: absolute;
+
+    top: 80px;
+    right: 0;
+
+    background: #111827;
+
+    flex-direction: column;
+
+    width: 220px;
+
+    display: none;
+
+    padding: 20px;
+  }
+
+  .nav-links.active{
+    display: flex;
+  }
+
+  .nav-links li{
+    margin: 15px 0;
+  }
+
+  .hero h1{
+    font-size: 42px;
+  }
+
+  .hero p{
+    font-size: 18px;
+  }
+
+  .section h2,
+  .contact-section h2{
+    font-size: 35px;
+  }
+
+  .section p{
+    font-size: 18px;
+  }
+
+  button{
+    padding: 12px 30px;
+  }
+}
